@@ -363,6 +363,7 @@ input:checked ~ .details {
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 10px;
+           margin-left:15px;
         }
 
         input, textarea {
