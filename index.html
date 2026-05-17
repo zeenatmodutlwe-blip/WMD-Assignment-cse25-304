@@ -127,37 +127,9 @@ function showFilters() {
 </main>
 
 
-     <script>
+<script>
 
-const apartments = [
-
-{
-    location: "Gaborone",
-    price: "1500",
-    bedrooms: "2",
-
-    image:
-    "images/apartment1.jpg",
-
-    details:
-    "Modern 2 bedroom apartment in Gaborone."
-},
-
-{
-    location: "Phakalane",
-    price: "2500",
-    bedrooms: "3",
-
-    image:
-    "images/apartment2.jpg",
-
-    details:
-    "Luxury apartment in Phakalane."
-}
-
-];
-
-function searchApartment() {
+async function searchApartment() {
 
     const location =
         document.getElementById("location").value;
@@ -167,6 +139,12 @@ function searchApartment() {
 
     const bedrooms =
         document.getElementById("bedrooms").value;
+
+    const response =
+        await fetch("YOUR_JSON_LINK");
+
+    const apartments =
+        await response.json();
 
     let output = "";
 
@@ -180,10 +158,9 @@ function searchApartment() {
 
             output += `
 
-            <div class="apartment-card">
+            <div class="card">
 
-                <img src="${apartment.image}"
-                width="300">
+                <img src="${apartment.image}">
 
                 <h2>${apartment.location}</h2>
 
@@ -203,7 +180,7 @@ function searchApartment() {
     if(output === "") {
 
         output =
-        "<p>No apartments found.</p>";
+        "<h2>No apartment found</h2>";
     }
 
     document.getElementById("results").innerHTML =
