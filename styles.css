@@ -467,6 +467,26 @@ input:checked ~ .details {
     text-align: center;
 }
 
+.apartment-card{
+
+    border:1px solid #ccc;
+
+    padding:20px;
+
+    margin-top:20px;
+
+    width:320px;
+}
+
+.apartment-card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+}
+
 
 
 
