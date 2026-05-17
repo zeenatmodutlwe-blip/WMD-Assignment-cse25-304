@@ -69,27 +69,30 @@
       <input type="text" placeholder="Search...">
        
      <div class="filters" id="filterBox">
-      <button>search</button>
+      <button onclick="searchApartment()">search</button>
       <label style="color:white;">Location</label>
-        <select>
+        <select id="location">
             <option>Gaborone Block8</option>
             <option>Mmopane Block1</option>
             <option>Mogoditshane</option>
         </select>
       
           <label style="color:white;">Price</label>
-          <select>
+          <select id="price">
             <option>P1000</option>
             <option>P1500</option>
             <option>P2000</option>
         </select>
 
         <label style="color:white;">Size</label>
-        <select>
+        <select id="size">
             <option>1 bed</option>
             <option>2 beds</option>
             <option>3 beds</option>
         </select>
+      
+
+<div id="results"></div>
     </div>
       
 <script>
@@ -122,6 +125,92 @@ function showFilters() {
     </div>
   
 </main>
+
+
+     <script>
+
+const apartments = [
+
+{
+    location: "Gaborone",
+    price: "1500",
+    bedrooms: "2",
+
+    image:
+    "images/apartment1.jpg",
+
+    details:
+    "Modern 2 bedroom apartment in Gaborone."
+},
+
+{
+    location: "Phakalane",
+    price: "2500",
+    bedrooms: "3",
+
+    image:
+    "images/apartment2.jpg",
+
+    details:
+    "Luxury apartment in Phakalane."
+}
+
+];
+
+function searchApartment() {
+
+    const location =
+        document.getElementById("location").value;
+
+    const price =
+        document.getElementById("price").value;
+
+    const bedrooms =
+        document.getElementById("bedrooms").value;
+
+    let output = "";
+
+    apartments.forEach(apartment => {
+
+        if(
+            apartment.location === location &&
+            apartment.price === price &&
+            apartment.bedrooms === bedrooms
+        ) {
+
+            output += `
+
+            <div class="apartment-card">
+
+                <img src="${apartment.image}"
+                width="300">
+
+                <h2>${apartment.location}</h2>
+
+                <p>Price:
+                BWP ${apartment.price}</p>
+
+                <p>Bedrooms:
+                ${apartment.bedrooms}</p>
+
+                <p>${apartment.details}</p>
+
+            </div>
+            `;
+        }
+    });
+
+    if(output === "") {
+
+        output =
+        "<p>No apartments found.</p>";
+    }
+
+    document.getElementById("results").innerHTML =
+        output;
+}
+
+</script>
 
      <footer>
         <p class="footer-bottom">© 2026 DOZELE.ESTATES.BW All rights reserved.</p>
