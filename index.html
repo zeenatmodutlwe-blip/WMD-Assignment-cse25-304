@@ -69,7 +69,7 @@
       <input type="text" placeholder="Search...">
        
      <div class="filters" id="filterBox">
-      <button onclick="searchApartment()">search</button>
+      <button onclick="goToApartment()">search</button>
       <label style="color:white;">Location</label>
         <select id="location">
             <option>Gaborone Block8</option>
@@ -129,62 +129,10 @@ function showFilters() {
 
 <script>
 
-async function searchApartment() {
+function goToApartment() {
 
-    const location =
-        document.getElementById("location").value;
-
-    const price =
-        document.getElementById("price").value;
-
-    const bedrooms =
-        document.getElementById("bedrooms").value;
-
-    const response =
-        await fetch("YOUR_JSON_LINK");
-
-    const apartments =
-        await response.json();
-
-    let output = "";
-
-    apartments.forEach(apartment => {
-
-        if(
-            apartment.location === location &&
-            apartment.price === price &&
-            apartment.bedrooms === bedrooms
-        ) {
-
-            output += `
-
-            <div class="card">
-
-                <img src="${apartment.image}">
-
-                <h2>${apartment.location}</h2>
-
-                <p>Price:
-                BWP ${apartment.price}</p>
-
-                <p>Bedrooms:
-                ${apartment.bedrooms}</p>
-
-                <p>${apartment.details}</p>
-
-            </div>
-            `;
-        }
-    });
-
-    if(output === "") {
-
-        output =
-        "<h2>No apartment found</h2>";
-    }
-
-    document.getElementById("results").innerHTML =
-        output;
+    window.location.href =
+        "apartment-details.html";
 }
 
 </script>
