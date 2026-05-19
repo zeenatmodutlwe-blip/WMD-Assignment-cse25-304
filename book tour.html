@@ -47,32 +47,32 @@
         </header>
     
 <h1>BOOK YOUR TOUR TODAY!</h1>
-    <form class="button" action="saveTour.php" method="POST">
-     
-        <label style="color:black;">Full Name*</label>
-        <textarea placeholder="Enter your name"></textarea>
+   <form class="button" action="saveTour.php" method="POST">
 
-        <label style="color:black;">Address*</label>
-        <textarea placeholder="Enter your address"></textarea>
+    <label style="color:black;">Full Name*</label>
+    <input type="text" name="fullname" placeholder="Enter your name" required>
 
-        <label style="color:black;">Contact Number*</label>
-         <textarea placeholder="Enter your phone number"></textarea>
-          
-         <label style="color:black;">Desired Tour Date*</label>
-         <textarea placeholder="dd/mm/yy"></textarea>
+    <label style="color:black;">Address*</label>
+    <input type="text" name="address" placeholder="Enter your address" required>
 
-          <label style="color:black;">Time*</label>
-         <textarea placeholder="Enter tour time"></textarea>
+    <label style="color:black;">Contact Number*</label>
+    <input type="text" name="phone" placeholder="Enter your phone number" required>
 
+    <label style="color:black;">Desired Tour Date*</label>
+    <input type="date" name="tourdate" required>
 
-       <label style="color:black;">Number of bedrooms*</label>
-         <textarea placeholder="Enter number"></textarea>
+    <label style="color:black;">Time*</label>
+    <input type="time" name="tourtime" required>
 
-       <label style="width:30px; height:10px; color:black;">Comments*</label>
-         <textarea placeholder="Share comments here..."></textarea>
+    <label style="color:black;">Number of Bedrooms*</label>
+    <input type="number" name="bedrooms" placeholder="Enter number" required>
 
-        <button type="submit">Book Tour</button>
-    </form>
+    <label style="color:black;">Comments*</label>
+    <textarea name="comments" placeholder="Share comments here..."></textarea>
+
+    <button type="submit">Book Tour</button>
+
+</form>
 </div>
 
           <footer>
