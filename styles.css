@@ -475,10 +475,7 @@ font-size:16px;
 
 
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
+
 
 /* Background layer */
 .background {
@@ -503,3 +500,7 @@ body {
   padding: 50px;
   color: white;
 }
+
+
+
+
