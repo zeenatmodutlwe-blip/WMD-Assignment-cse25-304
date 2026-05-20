@@ -45,22 +45,40 @@
     </nav>
         </header>
 
- <form class="button">
-      
-        <label style="color:black;">Full Name*</label>
-        <textarea placeholder="Enter your first and last name"></textarea>
+ <form class="button"
+      action=https://formspree.io/f/xvzykoyd
+      method="POST">
 
-        <label style="color:black;">Email Address*</label>
-        <textarea placeholder="email@example.com"></textarea>
+<label style="color:black;">Full Name*</label>
+<input type="text"
+       name="fullname"
+       placeholder="Enter your full names"
+       required>
 
-        <label style="color:black;">Contact Number*</label>
-         <textarea placeholder="Enter your phone number"></textarea>
+<label style="color:black;">Address*</label>
+<input type="text"
+       name="address"
+       placeholder="Enter your email address"
+       required>
 
-        <label style="color:black;">Message*</label>
-         <textarea placeholder="Anything else to share?"></textarea>
-          
-        <button type="submit">Submit</button>
-    </form>
+<label style="color:black;">Phone*</label>
+<input type="tel"
+       name="phone"
+       placeholder="Enter your phone number"
+       required>
+
+
+<label style="color:black;">Message*</label>
+<textarea name="comments"
+          placeholder="Leave message here..."
+          required></textarea>
+
+<button type="submit">
+Submit
+</button>
+
+</form>
+
 
 
     
