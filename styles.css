@@ -26,9 +26,6 @@ header {
    width:100vw;
  max-width: 100vw;
 
-   filter: blur(8px);
-  transform: scale(1.1); /* prevents edge cut-off */
-  z-index: -1;
 }
 
 .navbar-nav {
