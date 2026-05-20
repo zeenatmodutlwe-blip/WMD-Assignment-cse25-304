@@ -28,18 +28,27 @@ header {
 
 }
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 .navbar{
+width:100%;
 background:black;
 padding:20px;
-width:100%;
+overflow-x:auto;
+white-space:nowrap;
 }
 
 .nav-links{
 display:flex;
 justify-content:center;
+align-items:center;
 gap:30px;
 list-style:none;
-flex-wrap:wrap;
+flex-wrap:nowrap;
 }
 
 .nav-links a{
