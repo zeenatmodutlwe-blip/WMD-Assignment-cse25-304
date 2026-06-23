@@ -7,6 +7,10 @@ body {
    display: flex;
    flex-direction:column;
  }
+.panel:hover{
+   flex:4;
+   filter:grayscale(0%);
+}
 
 header {
    margin:0px;
