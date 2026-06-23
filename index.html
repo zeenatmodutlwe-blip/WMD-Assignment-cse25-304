@@ -141,6 +141,274 @@ function goToApartment() {
 
 </script>
 
+
+
+
+  <h1 style="color:white;">Apartments</h1>
+        <div class="background"></div>
+
+<div class="content">
+    <main>
+<h1>APARTMENT FEATURES</h1> 
+      <p>These provides a variety of images of the apartment that you can choose from at an affodable price.</p>
+      
+   
+  <main class="container-fluid px-0">
+   
+  <div class="col-12">
+    <div class="image-container">
+      
+        <div class="gallery">
+          
+        <div class="image-grid">
+        <div>
+          <img src="images/kitchen1.jpg" alt="KITCHEN" width="600" height="400" style="width:600px; height:400px; line-height:300px; margin-left:5px; display:inline-block;" onclick="openLightbox(0)">
+        </div>
+
+        <div>
+          <img src="images/2bed.jpg" alt="BED" width="600" height="400" style="width:600px; height:400px; line-height:300px; margin-left:5px; display:inline-block;" onclick="openLightbox(1)">
+        </div>
+
+        <div>
+          <img src="images/kitchen2.jpg" alt="KITCHEN" width="600" height="400" style="width:600px; height:400px; margin-left:5px; display:inline-block;" onclick="openLightbox(2)">
+        </div>
+
+        <div>
+          <img src="images/bath1.jpg" alt="BATH" width="600" height="400" style="width:600px; height:400px; margin-left:5px; display:inline-block;" onclick="openLightbox(3)">
+        </div>
+
+        <div>
+          <img src="images/sittingroom3.jpg" alt="SITTING ROOM" width="600" height="400" style="width:600px; height:400px; margin-left:5px; display:inline-block;" onclick="openLightbox(4)">
+        </div>
+
+        <div>
+          <img src="images/bluebeds.jpg" width="600" alt="BLUEBEDS" height="400" style="width:600px; height:400px; margin-left:5px; display:inline-block;" onclick="openLightbox(5)">
+        </div>
+
+           <div>
+          <img src="images/GREYBATH.jpg" alt="BATHROOM" width="600" height="400" style="width:600px; height:400px; margin-left:5px; display:inline-block;" onclick="openLightbox(6)">
+        </div>
+
+           <div>
+          <img src="images/sittingroom2.jpg" alt="SITTINGROOM" width="600" height="400" style="width:600px; height:400px; margin-left:5px; display:inline-block;" onclick="openLightbox(7)">
+        </div>
+
+           <div>
+          <img src="images/bed1.jpg" alt="BEDROOM" width="600" height="400" style="width:600px; height:400px; margin-left:5px; display:inline-block;" onclick="openLightbox(8)">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+
+
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <span class="prev" onclick="changeImage(-1)">❮</span>
+
+    <img id="lightboxImage">
+    <p id="caption"></p>
+
+    <span class="next" onclick="changeImage(1)">❯</span>
+
+    <button class="back-btn" onclick="closeLightbox()">
+        Back to Apartment Page
+    </button>
+</div>
+
+    <script>
+let images = [
+    { src: "images/kitchen1.jpg", title: "Kitchen" },
+    { src: "images/2bed.jpg", title: "Bedroom" },
+    { src: "images/kitchen2.jpg", title: "Modern Kitchen" },
+    { src: "images/bath1.jpg", title: "Bathroom" },
+    { src: "images/sittingroom3.jpg", title: "Living Room" },
+    { src: "images/bluebeds.jpg", title: "Master Bedroom" },
+    { src: "images/GREYBATH.jpg", title: "Bathroom" },
+    { src: "images/sittingroom2.jpg", title: "Sitting Room" },
+    { src: "images/bed1.jpg", title: "Bedroom" }
+];
+
+let currentIndex = 0;
+
+function openLightbox(index) {
+    currentIndex = index;
+    document.getElementById("lightbox").style.display = "flex";
+    showImage();
+}
+
+function showImage() {
+    document.getElementById("lightboxImage").src = images[currentIndex].src;
+    document.getElementById("caption").innerText = images[currentIndex].title;
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
+function changeImage(step) {
+    currentIndex += step;
+
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+    }
+
+    if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
+
+    showImage();
+}
+    </script>
+
+    
+</main>
+
+
+
+      <h1 style="color:white;">Apartment Details</h1>
+        <div class="background"></div>
+
+<div class="content">
+<h1>FLOOR PLANS</h1>
+      <p>This provides a more detailed information about the apartment rooms that are available.</p>
+    
+    <main class="container-fluid px-0">
+   
+      <div class="col-12"></div>
+
+<div class="image-container">
+  <div class="row">
+    <div class="image-grid">
+
+      <!-- Apartment 1 -->
+      <div class="apartment-box" >
+        <div class="image-row" >
+          <img src="images/kidbed.jpg" alt="1bed" style="margin-left:5px;">
+        </div>
+
+          <p style="margin-left:10px;"><strong>Price:</strong> BWP 1,000 / month</p>
+          <p style="margin-left:10px;"><strong>Location:</strong> Mogoditshane</p>
+          <p style="margin-left:10px;"><strong>Size:</strong> 2 bedrooms</p>
+          <p style="margin-left:10px;"><strong>Description:</strong>Has 1 bathroom,
+                                                                    2 single beds in separate bedrooms, 
+                                                                    fitted kitchen and a living room. 
+                                                                    Suitable for students as it has a study table, airconditioner and free wifi.
+          </p>
+          
+      </div>      
+
+
+      <!-- Apartment 2 -->
+      <div class="apartment-box">
+        <div class="image-row">
+          <img src="images/bluebeds.jpg" alt="2beds" style="margin-left:5px;">
+        </div>
+
+          <p><strong>Price:</strong> BWP 2,000 / month</p>
+          <p><strong>Location:</strong> Gaborone, Block 8</p>
+          <p><strong>Size:</strong> 2 bedrooms</p>
+          <p><strong>Description:</strong>Has 1 double bed and 2 single beds on different rooms,
+                                          fitted kitchen,2 bathrooms and a living room.
+                                          Free wifi offered and rooms are airconditioned.
+                                          Suitable for a small family with 2 two kids.
+          </p>
+        </div>
+      
+
+
+      <!-- Apartment 3 -->
+      <div class="apartment-box">
+        <div class="image-row">
+          <img src="images/greenbed.jpg" alt="bed" style="margin-left:5px;">
+        </div>
+        
+          <p><strong>Price:</strong> BWP 1,000 / month</p>
+          <p><strong>Location:</strong> Mmopane, Block 1</p>
+          <p><strong>Size:</strong> 1 bedroom</p>
+          <p><strong>Description:</strong>Has 1 bathroom and a double bed.
+                                          Fitted kitchen and a living room.
+                                          Free wifi and airconditioned.
+                                          Suitable for couples.
+          </p>
+        </div>
+
+       <!-- Apartment 4 -->
+      <div class="apartment-box">
+        <div class="image-row">
+          <img src="images/bed2.jpg" alt="bed" style="margin-left:5px;">
+        </div>
+        
+          <p style="margin-left:10px;"><strong>Price:</strong> BWP 2,000 / month</p>
+          <p style="margin-left:10px;"><strong>Location:</strong> Mmopane, Block 1</p>
+          <p style="margin-left:10px;"><strong>Size:</strong> 2 bedrooms</p>
+          <p style="margin-left:10px;"><strong>Description:</strong>Has 1 single bed and a double bed on separate rooms.
+                                           Has 1 bathroom, fitted kitchen and living room.
+                                           Free wifi and airconditioned.
+                                           Suitable for a small family with 1 kid.
+          </p>
+        </div>
+
+
+       <!-- Apartment 5 -->
+      <div class="apartment-box">
+        <div class="image-row">
+          <img src="images/bed.jpg" alt="bed" style="margin-left:5px;">
+        </div>
+        
+          <p><strong>Price:</strong> BWP 1,500 / month</p>
+          <p><strong>Location:</strong> Mogoditshane</p>
+          <p><strong>Size:</strong> 1 bedroom</p>
+           <p><strong>Description:</strong>Has a master bedroom,
+                                           fitted kitchen, living room.
+                                           Free wifi and airconditioned.
+                                           Suitable for couples.
+          </p>
+        </div>
+
+
+       <!-- Apartment 6 -->
+      <div class="apartment-box">
+        <div class="image-row">
+          <img src="images/1bed.jpg" alt="bed" style="margin-left:5px;">
+        </div>
+        
+          <p><strong>Price:</strong> BWP 2,000 / month</p>
+          <p><strong>Location:</strong> Gaborone Block8</p>
+          <p><strong>Size:</strong> 3 bedroom</p>
+          <p><strong>Description:</strong>Has a master bedroom,
+                                          fitted kitchen, living room.
+                                          Has 2 other bedrooms with double beds.
+                                          Free wifi and airconditioned.
+                                          Suitable for a family.
+          </p>
+        </div>
+      
+      </div>
+
+    </div>
+  </div>
+
+
+<script>
+      function showDetails(button) {
+    let details = button.nextElementSibling;
+
+    if(details.style.display === "block"){
+        details.style.display = "none";
+    } else {
+        details.style.display = "block";
+    }
+}
+</script>
+       
+</main>
+          
+          
+
      <footer>
         <p class="footer-bottom">© 2026 DOZELE.ESTATES.BW All rights reserved.</p>
      </footer>
