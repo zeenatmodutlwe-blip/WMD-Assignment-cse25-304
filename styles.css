@@ -7,6 +7,23 @@ body {
    display: flex;
    flex-direction:column;
  }
+
+.moving-image {
+    width: 300px;
+    position: relative;
+    animation: moveSideways 5s infinite alternate ease-in-out;
+}
+
+@keyframes moveSideways {
+    from {
+        left: 0;
+    }
+    to {
+        left: 100px;
+    }
+}
+
+
 .panel:hover{
    flex:4;
    filter:grayscale(0%);
