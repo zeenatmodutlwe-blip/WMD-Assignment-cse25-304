@@ -1,11 +1,3 @@
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-12px); }
-}
-
-pic {
-  animation: float 3s ease-in-out infinite;
-}
 
 body {
    color:#333;
@@ -17,26 +9,7 @@ body {
    flex-direction:column;
  }
 
-.moving-image {
-    width: 300px;
-    position: relative;
-    animation: moveSideways 5s infinite alternate ease-in-out;
-}
 
-@keyframes moveSideways {
-    from {
-        left: 0;
-    }
-    to {
-        left: 100px;
-    }
-}
-
-
-.panel:hover{
-   flex:4;
-   filter:grayscale(0%);
-}
 
 header {
    margin:0px;
